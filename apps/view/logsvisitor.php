@@ -1,6 +1,6 @@
 <?php
 	date_default_timezone_set("Asia/Jakarta");
-	include "../../config/database.php";
+	include "../config/database.php";
 	$visitor_ip		= $_SERVER['REMOTE_ADDR'];
 	$visitor_agent	= $_SERVER['HTTP_USER_AGENT'];
 	$visitor_date	= date("Y-m-d H:i:s");

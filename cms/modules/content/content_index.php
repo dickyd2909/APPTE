@@ -33,15 +33,15 @@
                             <td width="1%" align="center"><?= $no++; ?></td>
                             <td width="1%">
 								<?php if(!empty($dt['content_image'])){ ?>
-									<img src="../../../assets/images/content/<?= $dt['content_image']; ?>" width="150">
+									<img src="../../assets/images/content/<?= $dt['content_image']; ?>" width="150">
 								<?php }else{?>
-									<img src="../../../assets/images/no-image.png" width="150">
+									<img src="../../assets/images/no-image.png" width="150">
 								<?php } ?>
 							</td>
                             <td><?= $dt['content_judul'] ?></td>
 							<td><?= $dt['content_desc'] ?></td>
 							<td><?= $dt['contentcat_judul'] ?></td>
-							<td><?= $dt['contentcat_url'] ?></td>
+							<td><?= $dt['content_url'] ?></td>
                             <td><?= $dt['content_status'] ?></td>
                             <td><?= $dt['content_order'] ?></td>
                             <td><a href="#" id="myBtnEdit<?= $dt['content_id']; ?>" class="btnedit"><i class="fa fa-pen"></i></a> <a href="javascript:void(0)" title="Hapus" class="btnhps" data-nama="<?= $dt['content_judul']; ?>" data-url="index.php?m=contenthapus&id=<?= $dt['content_id']; ?>"><i class="fa fa-trash"></i></a></td>
@@ -134,7 +134,7 @@
 			<div id="formbox" class="clearfix">
                 <div class="formlabel">Meta Keyword</div>
                 <div class="forminput">
-                    <textarea name="content_keyword" class="form-control"></textarea>
+                    <textarea name="content_metakey" class="form-control"></textarea>
                 </div>
             </div>
             <div id="formbox" class="clearfix">
@@ -179,7 +179,7 @@
                 <div class="formlabel">Kategori</div>
                 <div class="forminput">
                     <select name="contentcat_id" class="form-control" required>
-                        <option value="<?= $adt['contentcat_id']; ?>"><?= $adt['contentcat_id']; ?></value>
+                        <option value="<?= $adt['contentcat_id']; ?>"><?= $adt['contentcat_judul']; ?></value>
 						<?php 
 							$cdb = $koneksi->query("SELECT * FROM contentcat");
 							while($cdt = $cdb->fetch_array()){
@@ -229,9 +229,9 @@
                 <div class="formlabel">Image</div>
                 <div class="forminput">
 					<?php if(!empty($adt['content_image'])){ ?>
-						<img src="../../../assets/images/content/<?= $adt['content_image']; ?>" width="150">
+						<img src="../../assets/images/content/<?= $adt['content_image']; ?>" width="150">
 					<?php }else{ ?>
-						<img src="../../../assets/images/no-image.png" width="150">
+						<img src="../../assets/images/no-image.png" width="150">
 					<?php } ?>
                 </div>
             </div>
@@ -250,7 +250,7 @@
 			<div id="formbox" class="clearfix">
                 <div class="formlabel">Meta Keyword</div>
                 <div class="forminput">
-                    <textarea name="content_metakey" class="form-control"><?= $adt['content_keyword']; ?></textarea>
+                    <textarea name="content_metakey" class="form-control"><?= $adt['content_metakey']; ?></textarea>
                 </div>
             </div>
             <div id="formbox" class="clearfix">

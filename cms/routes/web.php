@@ -43,17 +43,22 @@
             case 'produkupdate': include("../controller/produkcontroller.php"); break;
             case 'produkhapus': include("../controller/produkcontroller.php"); break;
             // ====================================================================================================
-            // BARANG / PRODUK
+            // SUPPLIER
             case 'supplier': include("../modules/supplier/supplier_index.php"); break;
             case 'suppliersimpan': include("../controller/suppliercontroller.php"); break;
             case 'supplierupdate': include("../controller/suppliercontroller.php"); break;
             case 'supplierhapus': include("../controller/suppliercontroller.php"); break;
             // ====================================================================================================
+             // BAHAN
+             case 'bahan': include("../modules/bahan/bahan_index.php"); break;
+             case 'bahansimpan': include("../controller/bahancontroller.php"); break;
+             case 'bahanupdate': include("../controller/bahancontroller.php"); break;
+             case 'bahanhapus': include("../controller/bahancontroller.php"); break;
+             // ====================================================================================================
 			// PENJUALAN
             case 'penjualan': include("../modules/penjualan/penjualan_index.php"); break;
             case 'detailpenjualan': include("../modules/penjualan/detailpenjualan.php"); break;
             case 'statuspenjualan': include("../controller/penjualancontroller.php"); break;
-            case 'supplierhapus': include("../controller/suppliercontroller.php"); break;
             // ====================================================================================================
 			// SLIDESHOW
             case 'slideshow': include("../modules/slideshow/slideshow_index.php"); break;
@@ -87,6 +92,12 @@
             case 'beritasimpan': include("../controller/beritacontroller.php"); break;
             case 'beritaupdate': include("../controller/beritacontroller.php"); break;
             case 'beritahapus': include("../controller/beritacontroller.php"); break;
+            // ====================================================================================================
+            // TRANSAKSI
+            case 'transaksi': include("../modules/transaksi/transaksi_index.php"); break;
+            case 'transaksiaction': include("../controller/keranjangcontroller.php"); break;
+            case 'keranjang': include("../controller/keranjangcontroller.php"); break;
+            case 'keranjanghapus': include("../controller/keranjangcontroller.php"); break;
             // ====================================================================================================
         }
     }

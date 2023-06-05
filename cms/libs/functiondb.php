@@ -32,13 +32,13 @@
 	$server 	= 'localhost';
 	# ================================================= #
 	#
-	$username 	= 'ma956624_usolsop';
+	$username 	= 'root';
 	# ================================================= #
 	#
-	$password 	= '*m2_OFG(#$z_';
+	$password 	= '';
 	# ================================================= #
 	#
-	$database 	= 'ma956624_dbolsop';
+	$database 	= 'transel';
 	# ================================================= #
 	#
 	$koneksi	= @mysqli_connect($server, $username, $password, $database)or die ("<div style='text-align:center;padding:2% 0;background:#f9f9f9;color:#666;margin:20% auto;width:40%;font-family:Arial'>DATABASE COULD NOT CONNECT!</div>");

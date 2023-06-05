@@ -1,11 +1,15 @@
 <?php
     date_default_timezone_set('Asia/Jakarta');
     if ($_GET['m'] == 'produksimpan') {
+        $odb 				= $koneksi->query("SELECT MAX(content_order) AS LastNo FROM content");
+		$odt 				= $odb->fetch_array();
         $stringreplace 		= array ('/','\\',',','.','#',':',';','\'','"','[',']','{','}',')','(','|','`','~','!','@','%','$','^','&','*','=','?','+',' ','_');
         $barang_nama        = mysqli_real_escape_string($koneksi, $_POST['barang_nama']);
         $barang_jenis		= mysqli_real_escape_string($koneksi, $_POST['barang_jenis']);
 		$barang_harga   	= mysqli_real_escape_string($koneksi, $_POST['barang_harga']);
 		$barang_stok   	    = mysqli_real_escape_string($koneksi, $_POST['barang_stok']);
+        $supplier_id   	    = mysqli_real_escape_string($koneksi, $_POST['supplier_id']);
+        $bahan_id   	    = mysqli_real_escape_string($koneksi, $_POST['bahan_id']);
         $db                 = $koneksi->query("SELECT max(barang_id) as kodeTerbesar FROM barang");
         $dt                 = $db->fetch_array();
         $kode               = $dt['kodeTerbesar'];    
@@ -13,7 +17,7 @@
         $urutan++;
         $huruf              = "BR";
         $barang_id         = $huruf . sprintf("%04s", $urutan);
-
+        $barang_order 		= $odt['LastNo'] + 1;
         $code		   		= md5(uniqid(rand()));
         $gencode			= substr($code, 0, 5);
         $replace			= strtolower(str_replace($stringreplace,'_',$barang_nama));
@@ -26,7 +30,7 @@
 		$updated			= date('Y-m-d H:i:s');
 		
         if (empty($nama_file)) {
-            $sql = $koneksi->query("INSERT INTO barang (barang_id, barang_nama, barang_jenis, barang_harga, barang_stok) VALUES ('$barang_id', '$barang_nama', '$barang_jenis', '$barang_harga', '$barang_stok')")or die(mysqli_error($koneksi));
+            $sql = $koneksi->query("INSERT INTO barang (barang_id, barang_nama, barang_jenis, barang_harga, barang_stok, barang_order, supplier_id, bahan_id) VALUES ('$barang_id', '$barang_nama', '$barang_jenis', '$barang_harga', '$barang_stok', '$barang_order', '$supplier_id', '$bahan_id',)")or die(mysqli_error($koneksi));
             if($sql == true){
 				$koneksi->query("INSERT INTO logscontent (logscontent_id, logscontent_status, logscontent_desc, logscontent_read, postdated, admin_id) VALUES(NULL, 'Simpan', 'Data Produk: $barang_nama', '1', '$updated', '$_SESSION[admin_id]')")or die(mysqli_error($koneksi));
                 $_SESSION['success'] = 'Data Barang Berhasil Ditambahkan';
@@ -40,7 +44,7 @@
                 echo "<meta http-equiv='refresh' content='0; url=index.php?m=produk'>";
             }else{
                 $gambar_baru = move_uploaded_file($alamat, $tujuan);
-                $sql = $koneksi->query("INSERT INTO barang (barang_id, barang_nama, barang_jenis, barang_harga, barang_stok, barang_image) VALUES ('$barang_id', '$barang_nama', '$barang_jenis', '$barang_harga', '$barang_stok', '$nama_baru')")or die(mysqli_error($koneksi));
+                $sql = $koneksi->query("INSERT INTO barang (barang_id, barang_nama, barang_jenis, barang_harga, barang_stok, barang_image, barang_order, supplier_id, bahan_id) VALUES ('$barang_id', '$barang_nama', '$barang_jenis', '$barang_harga', '$barang_stok', '$nama_baru', '$barang_order', '$supplier_id', '$bahan_id' )")or die(mysqli_error($koneksi));
 
                 if($sql == true){
 					$koneksi->query("INSERT INTO logscontent (logscontent_id, logscontent_status, logscontent_desc, logscontent_read, postdated, admin_id) VALUES(NULL, 'Simpan', 'Data Produk: $barang_nama', '1', '$updated', '$_SESSION[admin_id]')")or die(mysqli_error($koneksi));
@@ -58,6 +62,8 @@
         $barang_jenis		= mysqli_real_escape_string($koneksi, $_POST['barang_jenis']);
 		$barang_harga   	= mysqli_real_escape_string($koneksi, $_POST['barang_harga']);
         $barang_stok        = mysqli_real_escape_string($koneksi, $_POST['barang_stok']);
+        $supplier_id        = mysqli_real_escape_string($koneksi, $_POST['supplier_id']);
+        $bahan_id           = mysqli_real_escape_string($koneksi, $_POST['bahan_id']);
 
         $code		   		= md5(uniqid(rand()));
         $gencode			= substr($code, 0, 5);
@@ -75,7 +81,9 @@
                 barang_nama      = '$barang_nama',
                 barang_jenis     = '$barang_jenis',
                 barang_harga     = '$barang_harga',
-                barang_stok      = '$barang_stok'
+                barang_stok      = '$barang_stok',
+                supplier_id      = '$supplier_id',
+                bahan_id         = '$bahan_id'
                 WHERE barang_id  = '$barang_id'") or die(mysqli_error($koneksi));
             if($sql == true){
 				$koneksi->query("INSERT INTO logscontent (logscontent_id, logscontent_status, logscontent_desc, logscontent_read, postdated, admin_id) VALUES(NULL, 'Update', 'Data Produk: $barang_nama', '1', '$updated', '$_SESSION[admin_id]')")or die(mysqli_error($koneksi));
@@ -100,6 +108,8 @@
                 barang_jenis     = '$barang_jenis',
                 barang_harga     = '$barang_harga',
                 barang_stok      = '$barang_stok',
+                supplier_id      = '$supplier_id',
+                bahan_id         = '$bahan_id',
                 barang_image     = '$nama_baru'
                 WHERE barang_id  = '$barang_id'") or die(mysqli_error($koneksi));
                 if($sql == true){

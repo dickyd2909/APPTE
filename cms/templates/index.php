@@ -150,24 +150,32 @@
 									}else{
 										$co = "";
 									}
-									if($_GET['m'] == 'berita'){
-										$br = "active";
+									if($_GET['m'] == 'bahan'){
+										$bh = "active";
 									}else{
-										$br = "";
+										$bh = "";
+									}
+									if($_GET['m'] == 'transaksi'){
+										$tr = "active";
+									}else{
+										$tr = "";
 									}
 								}
 							?>
 							<li><a href="index.php?m=dashboard" class="navlink <?= $db; ?>">Dashboard</a></li>
 							<li><a href="index.php?m=admincat" class="navlink <?= $ac; ?>">Admin Category</a></li>
 							<li><a href="index.php?m=admin" class="navlink <?= $ad; ?>">Admin</a></li>
+							<li><a href="index.php?m=supplier" class="navlink <?= $sp; ?>">Supplier</a></li>
+							<li><a href="index.php?m=bahan" class="navlink <?= $bh; ?>">Bahan</a></li>
 							<li><a href="index.php?m=customer" class="navlink <?= $cs; ?>">Customer</a></li>
 							<li><a href="index.php?m=produk" class="navlink <?= $pd; ?>">Product</a></li>
-							<li><a href="index.php?m=penjualan" class="navlink <?= $pj; ?>">Selling</a></li>
-							<li><a href="index.php?m=slideshow" class="navlink <?= $sd; ?>">Slideshow</a></li>
-							<li><a href="index.php?m=menu" class="navlink <?= $mn; ?>">Menu</a></li>
-							<li><a href="index.php?m=contentcat" class="navlink <?= $cc; ?>">Content Category</a></li>
-							<li><a href="index.php?m=content" class="navlink <?= $co; ?>">Content</a></li>
-							<li><a href="index.php?m=berita" class="navlink <?= $br; ?>">Berita</a></li>
+							<li><a href="index.php?m=penjualan" class="navlink <?= $pj; ?>">Data Penjualan</a></li>
+							<li><a href="index.php?m=transaksi" class="navlink <?= $tr; ?>">Transaksi</a></li>
+							<!-- <li><a href="index.php?m=slideshow" class="navlink <?= $sd; ?>">Slideshow</a></li> -->
+							<!-- <li><a href="index.php?m=menu" class="navlink <?= $mn; ?>">Menu</a></li> -->
+							<!-- <li><a href="index.php?m=contentcat" class="navlink <?= $cc; ?>">Content Category</a></li> -->
+							<!-- <li><a href="index.php?m=content" class="navlink <?= $co; ?>">Content</a></li> -->
+							<!-- <li><a href="index.php?m=berita" class="navlink <?= $br; ?>">Berita</a></li> -->
 						</ul>
 					</div>
 					<div class="sidebarview">
