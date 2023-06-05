@@ -1,0 +1,109 @@
+body {background:#4e73df;background-size:100%;padding:0;margin:0 auto;}
+.clearfix:after {clear:both;content:".";display:block;height:0;visibility:hidden;}
+#container {width:100%;height:100%;display:table;position:fixed;text-align:center;}
+#containerbox {display:table-cell;text-align:center;vertical-align:middle;font-family:'Roboto Condensed', sans-serif;}
+#containerbg {width:620px;font-weight:400;font-size:15px;font-family:'Roboto Condensed', sans-serif;margin:0 auto;background:#FFF;color:#000;border-radius:5px;padding:40px;}
+
+
+.contkiri{width:50%;margin:0 auto;padding:0;float:left;}
+.contkiriimg{width:320px;margin:0 auto;padding:0;}
+.contkiriimg img{width:100%;}
+.contkanan{width:50%;margin:0 auto;padding:0;float:left;}
+#form {margin:0 auto;padding:0;}
+#formlogin {width:100%;margin:auto;border-radius:10px;float:none;padding-bottom:10px;}
+#formcover {padding:0;}
+.formcovertitle {font-weight:400;font-size:15px;font-family:'Roboto Condensed', sans-serif;padding:20px 0 0;text-align:center;}
+.formcoversubtitle {font-weight:700;font-size:18px;font-family:'Roboto Condensed', sans-serif;color:#253544;padding-bottom:15px;}
+.formcovertitles {font-weight:700;font-size:20px;font-family:'Roboto Condensed', sans-serif;padding:20px 0 0;text-align:center;color:#C00;}
+.formcoversubtitles {font-weight:400;font-size:15px;font-family:'Roboto Condensed', sans-serif;color:#253544;padding-bottom:15px;}
+.formcoverinput {width:100%;padding:15px 0;margin:5px 0;border: 1px solid #d1d3e2;background:#fff;font-weight:400;font-size:15px;font-family:'Roboto Condensed', sans-serif;text-align:center;color:#999;border-radius: 10rem;transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
+.formcoverinput:focus {border:1px solid #d1d3e2;box-shadow: 0 2px 15px 0 #4e73df;outline: #d1d3e2;}
+.formcoverbuttontombol {margin:0;padding:0;}
+.formcoverbutton {margin:0;padding:0;}
+
+#copyright {width:100%;height:auto;text-align:center;padding-bottom:20px;font-size:14px;}
+.copyrightlink {margin:10px 0;}
+.copyrightlink a {text-decoration:none;color:#253544}
+.copyrightlink a:hover {color:#C00}
+.copyrightcopy {padding:5px 0;}
+.copyrightdeveloped {width:100%;height:auto;text-align:center;}
+.copyrightdeveloped a {color:#000;text-decoration:none;}
+.copyrightdeveloped a span {color:#C00;text-decoration:none;}
+
+.loginbutton {
+	background:#4e73df;
+	border-radius:10rem;
+	border:0 solid #253544;
+	display:inline-block;
+	cursor:pointer;
+	color:#FFF;
+	font-weight:700;
+	font-size:14px;
+	font-family:'Roboto Condensed', sans-serif;
+	padding:10px 0;
+	text-decoration:none;
+	width:100%;
+	margin-top:10px;
+}
+.loginbutton:hover {
+	background-color:#3d67e4;
+}
+.loginbutton:active {
+	position:relative;
+	top:1px;
+}
+
+@media screen and (max-width:990px){
+	#container {width:100%;height:100%;display:table;position:fixed;text-align:center;}
+	#containerbox {display:table-cell;text-align:center;vertical-align:middle;font-family:'Roboto Condensed', sans-serif;}
+	#containerbg {width:260px;font-weight:400;font-size:15px;font-family:'Roboto Condensed', sans-serif;margin:0 auto;background:#FFF;color:#000;border-radius:5px;padding:40px;}
+
+
+	.contkiri{width:50%;margin:0 auto;padding:0;float:left;display:none;}
+	.contkiriimg{width:320px;margin:0 auto;padding:0;}
+	.contkiriimg img{width:100%;}
+	.contkanan{width:100%;margin:0 auto;padding:0;float:none;}
+	#form {margin:0 auto;padding:0;}
+	#formlogin {width:100%;margin:auto;border-radius:10px;float:none;padding-bottom:10px;}
+	#formcover {padding:0;}
+	.formcovertitle {font-weight:400;font-size:15px;font-family:'Roboto Condensed', sans-serif;padding:20px 0 0;text-align:center;}
+	.formcoversubtitle {font-weight:700;font-size:18px;font-family:'Roboto Condensed', sans-serif;color:#253544;padding-bottom:15px;}
+	.formcovertitles {font-weight:700;font-size:20px;font-family:'Roboto Condensed', sans-serif;padding:20px 0 0;text-align:center;color:#C00;}
+	.formcoversubtitles {font-weight:400;font-size:15px;font-family:'Roboto Condensed', sans-serif;color:#253544;padding-bottom:15px;}
+	.formcoverinput {width:100%;padding:15px 0;margin:5px 0;border: 1px solid #d1d3e2;background:#fff;font-weight:400;font-size:15px;font-family:'Roboto Condensed', sans-serif;text-align:center;color:#999;border-radius: 10rem;transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;}
+	.formcoverinput:focus {border:1px solid #d1d3e2;box-shadow: 0 2px 15px 0 #4e73df;outline: #d1d3e2;}
+	.formcoverbuttontombol {margin:0;padding:0;}
+	.formcoverbutton {margin:0;padding:0;}
+
+	#copyright {width:100%;height:auto;text-align:center;padding-bottom:20px;font-size:14px;}
+	.copyrightlink {margin:10px 0;}
+	.copyrightlink a {text-decoration:none;color:#253544}
+	.copyrightlink a:hover {color:#C00}
+	.copyrightcopy {padding:5px 0;}
+	.copyrightdeveloped {width:100%;height:auto;text-align:center;}
+	.copyrightdeveloped a {color:#000;text-decoration:none;}
+	.copyrightdeveloped a span {color:#C00;text-decoration:none;}
+
+	.loginbutton {
+		background:#4e73df;
+		border-radius:10rem;
+		border:0 solid #253544;
+		display:inline-block;
+		cursor:pointer;
+		color:#FFF;
+		font-weight:700;
+		font-size:14px;
+		font-family:'Roboto Condensed', sans-serif;
+		padding:10px 0;
+		text-decoration:none;
+		width:100%;
+		margin-top:10px;
+	}
+	.loginbutton:hover {
+		background-color:#3d67e4;
+	}
+	.loginbutton:active {
+		position:relative;
+		top:1px;
+	}
+}

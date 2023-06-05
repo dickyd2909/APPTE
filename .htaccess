@@ -1,0 +1,34 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteBase /
+Options All -Indexes
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^beranda$ apps/beranda.php [L]
+RewriteRule ^visitor$ apps/view/logsvisitor.php [L]
+RewriteRule ^registrasi$ apps/registrasi.php [L] 
+RewriteRule ^login$ apps/login.php [L]
+RewriteRule ^checkout$ apps/checkout.php [L]
+RewriteRule ^riwayat$ apps/riwayat.php [L]
+RewriteRule ^keranjang$ apps/keranjang.php [L]
+RewriteRule ^keranjangaction$ apps/keranjangaction.php [L]
+RewriteRule ^loginaction$ apps/loginaction.php?act=in [L] 
+RewriteRule ^logout$ apps/loginaction.php?act=out [L] 
+RewriteRule ^regisaction$ apps/regisaction.php [L] 
+RewriteRule ^pembayaran$ apps/pembayaran.php [L] 
+RewriteRule ^detailOf-(.*)$ apps/detail.php?id=$1 [L]
+RewriteRule ^buktitransfer-(.*)$ apps/buktitransfer.php?id=$1 [L]
+
+
+
+RewriteCond %{HTTPS} off
+RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+
+# protect database order allow,deny deny from all
+ErrorDocument 404 https://olshop.maliniart.com/page-not-found
+
+
+# RewriteRule ^10(.*)$ site/artikelkatpage.php?page=artikelkatpage&id=$1 [L]
+# RewriteRule ^20(.*)$ site/artikeldetails.php?page=artikeldetails&id=$1 [L]
+</IfModule>

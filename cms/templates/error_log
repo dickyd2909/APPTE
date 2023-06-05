@@ -1,0 +1,10 @@
+[30-Jan-2023 12:27:44 UTC] PHP Fatal error:  Call to undefined function select() in /home/ma956624/olshop.maliniart.com/cms/modules/admin/admin_edit.php on line 46
+[30-Jan-2023 19:36:56 Asia/Jakarta] PHP Fatal error:  Call to undefined function update() in /home/ma956624/olshop.maliniart.com/cms/controller/admincontroller.php on line 74
+[30-Jan-2023 19:37:08 Asia/Jakarta] PHP Fatal error:  Call to undefined function update() in /home/ma956624/olshop.maliniart.com/cms/controller/admincontroller.php on line 74
+[30-Jan-2023 19:37:28 Asia/Jakarta] PHP Fatal error:  Call to undefined function update() in /home/ma956624/olshop.maliniart.com/cms/controller/admincontroller.php on line 74
+[31-Jan-2023 11:51:25 UTC] PHP Warning:  include(../modules/logs/logsvisitor.php): failed to open stream: No such file or directory in /home/ma956624/olshop.maliniart.com/cms/routes/web.php on line 70
+[31-Jan-2023 11:51:25 UTC] PHP Warning:  include(../modules/logs/logsvisitor.php): failed to open stream: No such file or directory in /home/ma956624/olshop.maliniart.com/cms/routes/web.php on line 70
+[31-Jan-2023 11:51:25 UTC] PHP Warning:  include(): Failed opening '../modules/logs/logsvisitor.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/ma956624/olshop.maliniart.com/cms/routes/web.php on line 70
+[31-Jan-2023 11:58:19 UTC] PHP Fatal error:  Call to a member function fetch_array() on boolean in /home/ma956624/olshop.maliniart.com/cms/modules/logs/logsvisitor.php on line 24
+[24-May-2023 14:22:32 UTC] PHP Fatal error:  Call to a member function fetch_array() on boolean in /home/ma956624/olshop.maliniart.com/cms/modules/penjualan/detailpenjualan.php on line 29
+[24-May-2023 14:22:36 UTC] PHP Fatal error:  Call to a member function fetch_array() on boolean in /home/ma956624/olshop.maliniart.com/cms/modules/penjualan/detailpenjualan.php on line 29
